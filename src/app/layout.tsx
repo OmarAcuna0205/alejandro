@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, DM_Sans } from "next/font/google";import "./globals.css";
+import { Bebas_Neue, Syne } from "next/font/google";import "./globals.css";
 import { cn } from "@/lib/utils";
+import { s } from "motion/react-m";
 
 const bebasNeue = Bebas_Neue({
   weight: "400",
@@ -8,7 +9,7 @@ const bebasNeue = Bebas_Neue({
   variable: "--font-bebas-neue",
 })
 
-const dmSans = DM_Sans({
+const syne = Syne({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-dm-sans",
@@ -28,7 +29,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased", bebasNeue.variable, dmSans.variable)}
+      className={cn("h-full", "antialiased", bebasNeue.variable, syne.variable)}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
