@@ -1,9 +1,11 @@
+import About from "@/components/public/about";
 import Hero from "@/components/public/hero";
 
 export default function HomePage() {
   return (
-    <main className="pt-20 min-h-screen bg-surface">
+    <main className="min-h-screen bg-surface">
       <Hero />
+      <About />
     </main>
   )
 }

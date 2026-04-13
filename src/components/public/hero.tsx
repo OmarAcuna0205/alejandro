@@ -1,9 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
 
-export const Hero = () => {
+export default function Hero() {
     return (
-        <div id="home" className="flex items-center flex-col text-white gap-6">
+        <div id="home" className="flex items-center flex-col text-white gap-6 py-28 md:py-20">
 
             <motion.img src={"images/profile_img.jpeg"} alt="profile image" className="h-60 w-60 rounded-full object-cover object-center" 
             initial={{ opacity: 0, y: 20 }}
@@ -38,5 +38,3 @@ export const Hero = () => {
         </div>
     )
 }
-
-export default Hero;

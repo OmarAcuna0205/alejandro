@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, Syne } from "next/font/google";import "./globals.css";
 import { cn } from "@/lib/utils";
-import { s } from "motion/react-m";
 
 const bebasNeue = Bebas_Neue({
   weight: "400",
@@ -29,7 +28,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased", bebasNeue.variable, syne.variable)}
+      className={cn("h-full", "antialiased", "scroll-smooth", bebasNeue.variable, syne.variable)}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
