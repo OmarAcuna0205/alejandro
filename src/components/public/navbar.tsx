@@ -21,7 +21,7 @@ export default function Navbar() {
         </ul>
       </div>
 
-      <div className="hidden md:flex items-center gap-2 font-body font-semibold rounded-sm bg-accent text-black px-2 py-1 hover:-translate-y-0.5 duration-300 transition-transform">
+      <div className="hidden md:flex items-center font-body font-semibold rounded-sm bg-accent text-black px-2 py-1 hover:-translate-y-0.5 duration-300 transition-transform">
         <a href="#contact" className="flex items-center gap-2">
           Contacto
           <ArrowUpRightIcon size={20}/>

@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
     return (
-        <div id="home" className="flex items-center flex-col text-white gap-6 py-28 md:py-20">
+        <div id="home" className="flex items-center flex-col text-white gap-6 py-28 md:py-20 px-6 max-w-4xl mx-auto">
 
-            <motion.img src={"images/profile_img.jpeg"} alt="profile image" className="h-60 w-60 rounded-full object-cover object-center" 
+            <motion.img src={"images/profile_img.jpg"} alt="profile image" className="h-60 w-60 rounded-full object-cover object-center" 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}

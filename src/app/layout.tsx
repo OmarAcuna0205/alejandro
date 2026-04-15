@@ -14,7 +14,6 @@ const syne = Syne({
   variable: "--font-dm-sans",
 })
 
-
 export const metadata: Metadata = {
   title: "Alejandro Prieto",
   description: "Architectonical portfolio of Alejandro Prieto, an architect based in Chihuahua City.",
