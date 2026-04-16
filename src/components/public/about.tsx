@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
     return (
-        <div id="about" className="flex flex-col items-center text-white gap-8 py-28 md:py-20 px-6 max-w-4xl mx-auto">
+        <div id="about" className="flex flex-col items-center justify-center text-white gap-6 py-24 px-10 max-w-4xl mx-auto">
 
             <motion.p className="font-heading text-5xl font-bold tracking-wider"
                 initial={{ opacity: 0, y: 20 }}
@@ -38,7 +38,7 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-            >Arquitecto egresado del Instituto Superior de Arquitectura y Diseño, con una visión fresca y una obsesión por los detalles. Cada proyecto es una oportunidad de transformar un espacio vacío en algo que perdure.</motion.p>
+            >Arquitecto egresado del Instituto Superior de Arquitectura y Diseño, con una visión fresca. Cada proyecto es una oportunidad de transformar un espacio vacío en algo que perdure.</motion.p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mt-8">
 

@@ -23,14 +23,14 @@ export default function Work() {
                 transition={{ duration: 2.5, ease: "easeOut" }}
             />
 
-            <div className="absolute inset-0 flex flex-col justify-start md:justify-end p-8 md:p-16">
+            <div className="absolute inset-0 flex flex-col justify-start md:justify-end p-8 md:p-12">
 
                 <motion.p 
-                    className="font-body text-accent text-sm uppercase mb-4"
+                    className="font-body text-accent text-lg uppercase mb-4"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 1.5, delay: 0.6 }}
+                    transition={{ duration: 1, delay: 0.6 }}
                 >Proyecto destacado</motion.p>
 
                 <motion.h2 
@@ -38,19 +38,18 @@ export default function Work() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 1.5, delay: 0.7 }}
+                    transition={{ duration: 1, delay: 0.7 }}
                 >Nombre del Proyecto</motion.h2>
 
                 <motion.p 
-                    className="font-body text-white/60  text-sm md:text-lg mt-4 max-w-md"
+                    className="font-body text-foreground text-sm md:text-lg mt-2 max-w-md"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 1.5, delay: 0.8 }}
+                    transition={{ duration: 1, delay: 0.8 }}
                 >Descripción breve del proyecto más reciente.</motion.p>
 
             </div>
-
         </section>
     )
 }
