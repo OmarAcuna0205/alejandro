@@ -1,4 +1,5 @@
 import About from "@/components/public/about";
+import Contact from "@/components/public/contact";
 import Hero from "@/components/public/hero";
 import ProjectsGrid from "@/components/public/projects";
 import Work from "@/components/public/work";
@@ -10,6 +11,7 @@ export default function HomePage() {
       <About />
       <Work />
       <ProjectsGrid />
+      <Contact />
     </main>
   )
 }

@@ -33,16 +33,16 @@ export default function About() {
                 transition={{ duration: 0.5, delay: 0.3 }}
             >Cuentan historias</motion.h2>
 
-            <motion.p className="text-muted text-lg text-center leading-relaxed font-body"
+            <motion.p className="text-muted text-sm md:text-lg text-center leading-relaxed font-body"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.4 }}
             >Arquitecto egresado del Instituto Superior de Arquitectura y Diseño, con una visión fresca. Cada proyecto es una oportunidad de transformar un espacio vacío en algo que perdure.</motion.p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 w-full mt-8">
 
-                <motion.div className="flex flex-col items-center gap-2 border border-muted/20 p-6 rounded-sm bg-muted/10"
+                <motion.div className="flex flex-col items-center gap-1 md:gap-2 border border-muted/20 p-6 rounded-sm bg-muted/10"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -52,7 +52,7 @@ export default function About() {
                     <p className="text-muted text-sm uppercase tracking-widest text-center">Años de experiencia</p>
                 </motion.div>
 
-                <motion.div className="flex flex-col items-center gap-2 border border-muted/20 p-6 rounded-sm bg-muted/10"
+                <motion.div className="flex flex-col items-center gap-1 md:gap-2 border border-muted/20 p-6 rounded-sm bg-muted/10"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -62,7 +62,7 @@ export default function About() {
                     <p className="text-muted text-sm uppercase tracking-widest text-center">Proyectos realizados</p>
                 </motion.div>
 
-                <motion.div className="flex flex-col items-center gap-2 border border-muted/20 p-6 rounded-sm bg-muted/10"
+                <motion.div className="flex flex-col items-center gap-1 md:gap-2 border border-muted/20 p-6 rounded-sm bg-muted/10"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
