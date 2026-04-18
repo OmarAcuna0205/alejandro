@@ -4,7 +4,7 @@ import { ArrowUpRightIcon } from "@phosphor-icons/react";
 
 export default function Hero() {
     return (
-        <div id="home" className="flex flex-col md:flex-row items-center justify-center gap-8 py-28 px-10 max-w-5xl mx-auto">
+        <div id="home" className="flex flex-col md:flex-row items-center justify-center gap-8 py-24 md:py-28 px-10 max-w-5xl mx-auto">
 
             <motion.div className="w-64 h-80 md:w-72 md:h-116 overflow-hidden rounded-sm shrink-0 bg-surface"
                 initial={{ opacity: 0, x: -20 }}

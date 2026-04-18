@@ -30,16 +30,16 @@ const projects = [
 
 export default function ProjectsGrid() {
     return (
-        <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto w-full">
+        <section id="projects" className="py-20 md:py-20 px-6 md:px-12 max-w-7xl mx-auto w-full">
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">
+            <div  className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 md:gap-y-20">
                 
                 {projects.map((project, index) => (
 
                     <motion.div key={project.id} className="group flex flex-col"
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: "-100px" }}
+                        viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: index * 0.1 }}
                     >
                         

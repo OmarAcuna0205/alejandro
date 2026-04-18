@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Work() {
     return (
-        <section id="work" className="relative h-[70vh] md:h-screen w-full overflow-hidden">
+        <section id="work" className="relative h-[90vh] md:h-screen w-full overflow-hidden py-20">
             
             <motion.img src="/images/work.jpg" alt="Proyecto destacado" className="absolute inset-0 w-full h-full object-cover"
                 initial={{ opacity: 0 }}

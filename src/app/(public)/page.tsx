@@ -6,7 +6,7 @@ import Work from "@/components/public/work";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-surface/75">
+    <main className="min-h-screen overflow-x-hidden">
       <Hero />
       <About />
       <Work />

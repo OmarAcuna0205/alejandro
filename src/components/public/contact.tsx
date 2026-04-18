@@ -1,85 +1,119 @@
 "use client";
+import { useState } from "react"
 import { motion } from "framer-motion";
 
 export default function Contact() {
-    return (
-        <section id="contact" className="py-24 px-6 md:px-12 max-w-7xl mx-auto w-full scroll-mt-28">
+
+    const [result, setResult] = useState("")
+
+    const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+        setResult("Enviando...")
+        const formData = new FormData(e.target as HTMLFormElement)
+        formData.append("access_key", "e4809f6e-7736-4892-b6e9-eea1bfe61b97")
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });    
+        
+        const data = await response.json()
+        if (data.success) {
+            setResult("¡Mensaje enviado!");
+            (e.target as HTMLFormElement).reset();
+        }  else {
+            setResult("Algo salió mal, intenta de nuevo.")
+        }
+    };
+
+    return (
+        <section id="contact" className="py-20 md:py-26 px-6 md:px-12 max-w-7xl mx-auto w-full scroll-mt-4">
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
                 
                 <div className="flex flex-col justify-center">
                     
                     <motion.p 
-                        className="font-body text-xs font-semibold tracking-[0.2em] uppercase text-white mb-6"
+                        className="font-body text-xs font-semibold uppercase text-foreground mb-6 tracking-wider"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: "-100px" }}
+                        viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
                         Contáctanos
                     </motion.p>
                     
                     <motion.h2 
-                        className="font-heading text-6xl md:text-8xl lg:text-[100px] leading-[0.9] tracking-tight text-white"
+                        className="font-heading text-6xl md:text-8xl text-foreground leading-none tracking-tight"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: "-100px" }}
+                        viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
-                        Creemos tu<br />refugio.
+                        Crando tus<br />sueños.
                     </motion.h2>
 
                 </div>
 
                 <motion.div 
-                    className="border border-white/10 rounded-2xl p-8 md:p-12 bg-white/2"
+                    className="border border-foreground/10 rounded-2xl p-8 md:p-12 bg-foreground/2"
                     initial={{ opacity: 0, x: 30 }} 
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
+                    viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
                 >
-                    <form className="flex flex-col gap-10">
+                    <form onSubmit={onSubmit} className="flex flex-col gap-10">
                         
                         <div className="relative">
                             <input 
+                                name="name"
                                 type="text" 
                                 placeholder="NOMBRE" 
-                                className="w-full bg-transparent border-b border-white/10 pb-3 text-xs tracking-widest font-body uppercase text-white placeholder:text-white/60 focus:outline-none focus:border-accent transition-colors"
+                                className="w-full bg-transparent border-b border-foreground/10 pb-3 text-xs tracking-widest font-body uppercase text-foreground placeholder:text-foreground/60 focus:outline-none focus:border-accent transition-colors"
                             />
                         </div>
 
                         <div className="relative">
                             <input 
+                                name="email"
                                 type="email" 
                                 placeholder="CORREO ELECTRÓNICO" 
-                                className="w-full bg-transparent border-b border-white/10 pb-3 text-xs tracking-widest font-body uppercase text-white placeholder:text-white/60 focus:outline-none focus:border-accent transition-colors"
+                                className="w-full bg-transparent border-b border-foreground/10 pb-3 text-xs tracking-widest font-body uppercase text-foreground placeholder:text-foreground/60 focus:outline-none focus:border-accent transition-colors"
+                            />
+                        </div>
+
+                        <div className="relative">
+                            <input
+                                name="phone" 
+                                type="tel" 
+                                placeholder="TELÉFONO" 
+                                className="w-full bg-transparent border-b border-foreground/10 pb-3 text-xs tracking-widest font-body uppercase text-foreground placeholder:text-foreground/60 focus:outline-none focus:border-accent transition-colors"
                             />
                         </div>
 
                         <div className="relative">
                             <input 
-                                type="tel" 
-                                placeholder="TELÉFONO" 
-                                className="w-full bg-transparent border-b border-white/10 pb-3 text-xs tracking-widest font-body uppercase text-white placeholder:text-white/60 focus:outline-none focus:border-accent transition-colors"
-                            />
-                        </div>
-
-                        <div className="relative">
-                            <textarea 
+                                name="message"
+                                type="text"
                                 placeholder="COMPARTE TU VISIÓN CON NOSOTROS" 
-                                rows={4}
-                                className="w-full bg-transparent border-b border-white/10 pb-3 text-xs tracking-widest font-body uppercase text-white placeholder:text-white/60 focus:outline-none focus:border-accent transition-colors resize-none"
+                                className="w-full bg-transparent border-b border-foreground/10 pb-3 text-xs tracking-widest font-body uppercase text-foreground placeholder:text-foreground/60 focus:outline-none focus:border-accent transition-colors"
                             />
                         </div>
 
                         <div className="mt-4">
                             <button 
-                                type="button" 
-                                className="px-10 py-3 rounded-full border border-white/20 text-xs tracking-[0.2em] uppercase font-body text-white hover:bg-white hover:text-black transition-all duration-300"
+                                type="submit"
+                                className="px-10 py-3 rounded-full border border-white/20 text-xs tracking-[0.2em] uppercase font-body text-foreground hover:bg-white hover:text-black transition-all duration-300"
                             >
                                 Enviar
                             </button>
                         </div>
+
+                        {result && (
+                            <p className="font-body text-xs tracking-widest uppercase text-accent">
+                                {result}
+                            </p>
+                        )}
 
                     </form>
                 </motion.div>

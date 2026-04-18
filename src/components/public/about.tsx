@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
     return (
-        <div id="about" className="flex flex-col items-center justify-center text-white gap-6 py-24 px-10 max-w-4xl mx-auto">
+        <div id="about" className="flex flex-col items-center justify-center text-white gap-6 py-20 md:py-26 px-10 max-w-4xl mx-auto">
 
             <motion.p className="font-heading text-5xl font-bold tracking-wider"
                 initial={{ opacity: 0, y: 20 }}

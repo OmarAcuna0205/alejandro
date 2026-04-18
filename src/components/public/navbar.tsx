@@ -3,7 +3,7 @@ import { WarehouseIcon, ArrowUpRightIcon, ListIcon } from "@phosphor-icons/react
 
 export default function Navbar() {
   return (
-    <nav className="fixed px-6 py-4 z-50 flex w-full items-center justify-between bg-background">
+    <nav className="fixed px-6 py-4 z-50 flex w-full items-center justify-between bg-background/95 border border-white">
       
       <div>
         <a href="#home" className="flex items-center gap-4 hover:text-accent transition-colors">
@@ -17,7 +17,7 @@ export default function Navbar() {
           <li><a href="#home" className="hover:text-accent transition-colors">Inicio</a></li>
           <li><a href="#about" className="hover:text-accent transition-colors">Sobre mí</a></li>
           <li><a href="#work" className="hover:text-accent transition-colors">Mi trabajo</a></li>
-          <li><a href="#contact" className="hover:text-accent transition-colors">Contacto</a></li>
+          <li><a href="#projects" className="hover:text-accent transition-colors">Proyectos</a></li>
         </ul>
       </div>
 
