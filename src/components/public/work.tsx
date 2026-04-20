@@ -33,14 +33,14 @@ export default function Work() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1, delay: 0.7 }}
-                >Nombre del Proyecto</motion.h2>
+                >Refugio de mujeres</motion.h2>
 
-                <motion.p className="font-body text-foreground text-sm md:text-lg mt-2 max-w-md"
+                <motion.p className="font-body text-foreground text-sm md:text-lg mt-2 max-w-lg"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1, delay: 0.8 }}
-                >Descripción breve del proyecto más reciente.</motion.p>
+                >Un refugio seguro para mujeres en situación de vulnerabilidad.</motion.p>
 
             </div>
         </section>
