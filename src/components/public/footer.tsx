@@ -73,7 +73,7 @@ export default function Footer() {
                     Diseño web por <span className="text-foreground hover:text-accent transition-colors cursor-pointer">Omar Acuña</span>
                 </p>
                 <p className="font-body text-xs text-muted tracking-wider">
-                    © {new Date().getFullYear()} Alejandro Prieto. Todos los derechos reservados.
+                    © {new Date().getFullYear()} Alejandro Prieto. Derechos reservados.
                 </p>
             </motion.div>
 

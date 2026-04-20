@@ -38,7 +38,7 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-            >Arquitecto egresado del Instituto Superior de Arquitectura y Diseño, con una visión fresca. Cada proyecto es una oportunidad de transformar un espacio vacío en algo que perdure.</motion.p>
+            >Arquitecto egresado del Instituto Superior de Arquitectura y Diseño, con una visión fresca. Cada proyecto es una oportunidad de transformar un espacio en algo que perdure.</motion.p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 w-full mt-8">
 
