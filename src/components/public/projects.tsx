@@ -30,7 +30,7 @@ const projects = [
 
 export default function ProjectsGrid() {
     return (
-        <section id="projects" className="scroll-mt-10 md:scroll-mt-0 py-16 md:py-20 px-6 md:px-12 max-w-7xl mx-auto w-full">
+        <section id="projects" className="scroll-mt-2 md:scroll-mt-0 py-16 md:py-20 px-6 md:px-12 max-w-7xl mx-auto w-full">
             
             <div  className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 md:gap-y-20">
                 

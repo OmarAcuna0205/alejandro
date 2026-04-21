@@ -50,41 +50,34 @@ export default function Navbar() {
 
       <AnimatePresence>
         {open && (
-          <motion.div
-            className="fixed inset-0 z-100 bg-background flex flex-col px-8 py-10"
+          
+          <motion.div className="fixed inset-0 z-100 bg-background flex flex-col px-8 py-10"
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            <button
-              className="self-end p-2 flex items-center justify-center hover:text-accent transition-colors"
-              onClick={() => setOpen(false)}
-            >
-              <XIcon size={32} />
-            </button>
+            <button className="self-end p-2 flex items-center justify-center text-accent hover:text-accent transition-colors" onClick={() => setOpen(false)}
+            ><XIcon size={32} /></button>
 
             <ul className="flex flex-col mt-8">
               {links.map((link, index) => (
-                <motion.li
+
+                <motion.li className="border-b border-foreground/10 py-5 flex justify-start items-center"
                   key={link.label}
-                  className="border-b border-foreground/10 py-5 flex justify-start items-center"
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.07 }}
+                  transition={{ duration: 0.5, delay: (index + 1) * 0.2, ease: "easeOut" }}
                 >
-                  <a
-                    href={link.href}
-                    className="font-heading text-5xl leading-none hover:text-accent transition-colors"
+                  <a href={link.href} className="font-heading text-5xl leading-none hover:text-accent transition-colors"
                     onClick={() => setOpen(false)}
-                  >
-                    {link.label}
-                  </a>
+                  >{link.label}</a>
                 </motion.li>
+                
               ))}
             </ul>
 
-            <p className="font-body text-xs text-muted mt-auto">Chihuahua, Chihuahua MX</p>
+            <p className="text-accent font-body text-xs mt-auto">Chihuahua, Chihuahua MX</p>
 
           </motion.div>
         )}

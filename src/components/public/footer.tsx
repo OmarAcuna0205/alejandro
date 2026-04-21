@@ -6,7 +6,7 @@ export default function Footer() {
     return (
         <footer>
 
-            <div className="px-6 md:px-12 mb-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="px-6 md:px-12 mt-10 mb-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
 
                 <motion.div
                     className="flex flex-col gap-4"
