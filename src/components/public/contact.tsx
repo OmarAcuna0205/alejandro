@@ -50,7 +50,7 @@ export default function Contact() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
-                        Crando tus<br />sueños.
+                        Creando tus<br />sueños.
                     </motion.h2>
 
                 </div>
