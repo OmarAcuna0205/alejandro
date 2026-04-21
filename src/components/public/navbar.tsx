@@ -17,10 +17,10 @@ export default function Navbar() {
   return (
     <div>
       <nav className="fixed px-6 py-4 z-50 flex w-full items-center justify-between bg-background/95 border-b border-white">
-        
+
         <div>
           <a href="#home" className="flex items-center gap-4 hover:text-accent transition-colors">
-            <WarehouseIcon size={32}/>
+            <WarehouseIcon size={32} />
             <p className="text-3xl font-heading leading-none">Alejandro Prieto</p>
           </a>
         </div>
@@ -38,11 +38,11 @@ export default function Navbar() {
         <div className="hidden md:flex items-center font-body font-semibold rounded-sm bg-accent text-black px-2 py-1 hover:-translate-y-0.5 duration-300 transition-transform">
           <a href="#contact" className="flex items-center gap-2">
             Contacto
-            <ArrowUpRightIcon size={20}/>
+            <ArrowUpRightIcon size={20} />
           </a>
         </div>
 
-        <button className="md:hidden text-accent hover:opacity-80 transition-opacity" onClick={() => setOpen(true)}>
+        <button className="md:hidden text-accent" onClick={() => setOpen(true)}>
           <ListIcon size={32} />
         </button>
 
@@ -50,14 +50,14 @@ export default function Navbar() {
 
       <AnimatePresence>
         {open && (
-          
+
           <motion.div className="fixed inset-0 z-100 bg-background flex flex-col px-8 py-10"
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            <button className="self-end p-2 flex items-center justify-center text-accent hover:text-accent transition-colors" onClick={() => setOpen(false)}
+            <button className="self-end p-2 flex items-center justify-center text-accent" onClick={() => setOpen(false)}
             ><XIcon size={32} /></button>
 
             <ul className="flex flex-col mt-8">
@@ -67,13 +67,13 @@ export default function Navbar() {
                   key={link.label}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: (index + 1) * 0.2, ease: "easeOut" }}
+                  transition={{ duration: 0.5, delay: (index + 1) * 0.15, ease: "easeOut" }}
                 >
-                  <a href={link.href} className="font-heading text-5xl leading-none hover:text-accent transition-colors"
+                  <a href={link.href} className="font-heading text-5xl leading-none"
                     onClick={() => setOpen(false)}
                   >{link.label}</a>
                 </motion.li>
-                
+
               ))}
             </ul>
 
