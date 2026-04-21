@@ -55,7 +55,7 @@ export default function Navbar() {
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
           >
             <button
               className="self-end p-2 flex items-center justify-center hover:text-accent transition-colors"
@@ -71,7 +71,7 @@ export default function Navbar() {
                   className="border-b border-foreground/10 py-5 flex justify-start items-center"
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: index * 0.07 }}
+                  transition={{ duration: 0.5, delay: index * 0.07 }}
                 >
                   <a
                     href={link.href}
