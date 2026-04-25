@@ -32,7 +32,7 @@ export default function ProjectPage() {
 
             </motion.section>
 
-            <motion.section className="px-6 md:px-20 py-20 md:py-36 grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-12">
+            <motion.section className="px-6 md:px-20 py-24 md:py-40 grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-12">
 
                 <div className="flex md:justify-center">
 
@@ -107,6 +107,7 @@ export default function ProjectPage() {
                 >Imágenes</motion.p>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+
                     <div className="overflow-hidden aspect-3/4">
                         <motion.img src="/images/detail1.jpg" alt="Detalle 1" className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                             initial={{ opacity: 0, y: 20 }}
@@ -130,6 +131,7 @@ export default function ProjectPage() {
                             viewport={{ once: true }}
                             transition={{ duration: 1, delay: 1, ease: "easeInOut" }} />
                     </div>
+
                 </div>
 
                 <motion.p className="font-body text-xs tracking-widest uppercase text-muted mb-8"
@@ -140,6 +142,7 @@ export default function ProjectPage() {
                 >Renders</motion.p>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+
                     <div className="overflow-hidden aspect-3/4">
                         <motion.img src="/images/render1.jpg" alt="Render 1" className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                             initial={{ opacity: 0, y: 20 }}
@@ -163,8 +166,43 @@ export default function ProjectPage() {
                             viewport={{ once: true }}
                             transition={{ duration: 1, delay: .8, ease: "easeInOut" }} />
                     </div>
+
                 </div>
 
+                <motion.p className="font-body text-xs tracking-widest uppercase text-muted mb-8"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
+                >Planos</motion.p>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+
+                    <div className="overflow-hidden aspect-3/4">
+                        <motion.img src="/images/plano1.jpg" alt="Plano 1" className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 1, delay: .8, ease: "easeInOut" }} />
+                    </div>
+
+                    <div className="overflow-hidden aspect-3/4">
+                        <motion.img src="/images/plano2.jpg" alt="Plano 2" className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 1, delay: .9, ease: "easeInOut" }} />
+                    </div>
+
+                    <div className="overflow-hidden aspect-3/4">
+                        <motion.img src="/images/plano3.jpg" alt="Plano 3" className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 1, delay: 1, ease: "easeInOut" }} />
+                    </div>
+
+                </div>
 
             </section>
 

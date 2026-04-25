@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const projects = [
     {
@@ -31,9 +32,9 @@ const projects = [
 export default function ProjectsGrid() {
     return (
         <section id="projects" className="scroll-mt-2 md:scroll-mt-0 py-16 md:py-20 px-6 md:px-12 max-w-7xl mx-auto w-full">
-            
-            <div  className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 md:gap-y-20">
-                
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 md:gap-y-20">
+
                 {projects.map((project, index) => (
 
                     <motion.div key={project.id} className="group flex flex-col"
@@ -42,20 +43,22 @@ export default function ProjectsGrid() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: index * 0.1 }}
                     >
-                        
-                        <div className="relative w-full aspect-4/3 overflow-hidden mb-4 cursor-pointer">
-                            <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"/>
-                        </div>
-                        
+                        <Link href={`/projects/${project.id}`}>
+                            <div className="relative w-full aspect-4/3 overflow-hidden mb-4 cursor-pointer">
+                                <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
+                            </div>
+                        </Link>
+
+
                         <div className="flex justify-between items-center mb-4 border-b border-muted/20 pb-2">
                             <h3 className="font-heading text-3xl md:text-4xl uppercase tracking-wider text-white">
                                 {project.title}
                             </h3>
-                            
-                            <a href={`#proyecto-${project.id}`} className="relative overflow-hidden pb-1 group/link cursor-pointer">
+
+                            <Link href={`/projects/${project.id}`} className="relative overflow-hidden pb-1 group/link cursor-pointer">
                                 <span className="font-body text-xs tracking-widest uppercase text-muted group-hover/link:text-accent transition-colors duration-300">Ver más</span>
                                 <span className="absolute bottom-0 left-0 w-full h-px bg-accent -translate-x-[101%] group-hover/link:translate-x-0 transition-transform duration-500 ease-out" />
-                            </a>
+                            </Link>
                         </div>
 
                         <p className="font-body text-muted text-sm md:text-base line-clamp-2">
@@ -63,11 +66,11 @@ export default function ProjectsGrid() {
                         </p>
 
                     </motion.div>
-                
+
                 ))}
 
             </div>
-            
+
         </section>
     );
 }
