@@ -1,6 +1,6 @@
 "use client"
-import { useState } from "react"
-import { WarehouseIcon, ArrowUpRightIcon, ListIcon, XIcon } from "@phosphor-icons/react";
+import { useEffect, useState } from "react"
+import { WarehouseIcon, ArrowUpRightIcon, ListIcon, XIcon, MoonIcon, SunIcon } from "@phosphor-icons/react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
@@ -13,6 +13,24 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+  const [isDark, setIsDark] = useState(false)
+
+  useEffect(() => {
+    const savedTheme = window.localStorage.getItem("theme")
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
+    const initialThemeIsDark = savedTheme ? savedTheme === "dark" : prefersDark
+
+    document.documentElement.classList.toggle("dark", initialThemeIsDark)
+    setIsDark(initialThemeIsDark)
+  }, [])
+
+  const toggleTheme = () => {
+    const nextThemeIsDark = !isDark
+
+    setIsDark(nextThemeIsDark)
+    document.documentElement.classList.toggle("dark", nextThemeIsDark)
+    window.localStorage.setItem("theme", nextThemeIsDark ? "dark" : "light")
+  }
 
   return (
     <div>
@@ -35,16 +53,24 @@ export default function Navbar() {
           </ul>
         </div>
 
-        <div className="hidden md:flex items-center font-body font-semibold rounded-sm bg-accent text-black px-2 py-1 hover:-translate-y-0.5 duration-300 transition-transform">
-          <a href="#contact" className="flex items-center gap-2">
-            Contacto
-            <ArrowUpRightIcon size={20} />
-          </a>
-        </div>
+        <div className="flex items-center gap-3">
 
-        <button className="md:hidden text-accent" onClick={() => setOpen(true)}>
-          <ListIcon size={32} />
-        </button>
+          {/*
+          <button type="button" onClick={toggleTheme} aria-label={isDark ? "Activar modo claro" : "Activar modo oscuro"} className="p-2 rounded-sm hover:border-accent hover:text-accent hover:-translate-y-0.5 duration-300 transition-all"
+          > {isDark ? <SunIcon size={22} /> : <MoonIcon size={22} />} </button>
+          */}
+
+          <div className="hidden md:flex items-center font-body font-semibold rounded-sm bg-accent text-black px-2 py-1 hover:-translate-y-0.5 duration-300 transition-transform">
+            <a href="#contact" className="flex items-center gap-2">
+              Contacto
+              <ArrowUpRightIcon size={20} />
+            </a>
+          </div>
+
+          <button className="md:hidden text-accent" onClick={() => setOpen(true)}>
+            <ListIcon size={32} />
+          </button>
+        </div>
 
       </nav>
 

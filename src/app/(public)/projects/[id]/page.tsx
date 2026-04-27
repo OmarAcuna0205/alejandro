@@ -7,7 +7,7 @@ import Contact from "@/components/public/contact";
 
 export default function ProjectPage() {
     return (
-        <main>
+        <main className="overflow-x-hidden">
 
             <motion.section className="relative h-screen"
                 initial={{ opacity: 0 }}
