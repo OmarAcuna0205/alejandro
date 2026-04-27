@@ -55,10 +55,9 @@ export default function Navbar() {
 
         <div className="flex items-center gap-3">
 
-          {/*
+
           <button type="button" onClick={toggleTheme} aria-label={isDark ? "Activar modo claro" : "Activar modo oscuro"} className="p-2 rounded-sm hover:border-accent hover:text-accent hover:-translate-y-0.5 duration-300 transition-all"
           > {isDark ? <SunIcon size={22} /> : <MoonIcon size={22} />} </button>
-          */}
 
           <div className="hidden md:flex items-center font-body font-semibold rounded-sm bg-accent text-black px-2 py-1 hover:-translate-y-0.5 duration-300 transition-transform">
             <a href="#contact" className="flex items-center gap-2">
