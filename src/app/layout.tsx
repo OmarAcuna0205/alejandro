@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Syne } from "next/font/google";import "./globals.css";
+import { Bebas_Neue, Syne } from "next/font/google"; import "./globals.css";
 import { cn } from "@/lib/utils";
 
 const bebasNeue = Bebas_Neue({
@@ -27,6 +27,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={cn("h-full", "antialiased", "scroll-smooth", bebasNeue.variable, syne.variable)}
     >
       <body className="min-h-full flex flex-col">{children}</body>

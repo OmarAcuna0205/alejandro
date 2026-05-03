@@ -11,14 +11,16 @@ export default function ProjectPage() {
 
             <motion.section className="relative h-screen"
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
                 transition={{ duration: 1.5, ease: "easeInOut" }}>
 
                 <img src="/images/work.jpg" alt="work" className="absolute inset-0 w-full h-full object-cover" />
 
                 <motion.div className="absolute top-24 left-6 md:left-12 z-10"
                     initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
                     transition={{ duration: 1.5, delay: 0.5, ease: "easeInOut" }}>
                     <Link href="/" className="hidden text-accent md:flex md:text-foreground hover:text-accent transition-colors hover:-translate-y-0.5 duration-300"
                     ><ArrowFatLeftIcon size={40} /></Link>
@@ -26,7 +28,8 @@ export default function ProjectPage() {
 
                 <motion.h1 className="absolute top-32 md:top-auto md:bottom-10 left-6 md:left-12 text-5xl md:text-9xl text-accent font-heading uppercase tracking-wide"
                     initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
                     transition={{ duration: 1.5, delay: 0.5, ease: "easeInOut" }}
                 >Refugio de la mujer</motion.h1>
 

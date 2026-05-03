@@ -51,7 +51,7 @@ export default function ProjectsGrid() {
 
 
                         <div className="flex justify-between items-center mb-4 border-b border-muted/20 pb-2">
-                            <h3 className="font-heading text-3xl md:text-4xl uppercase tracking-wider text-white">
+                            <h3 className="font-heading text-3xl md:text-4xl uppercase tracking-wider">
                                 {project.title}
                             </h3>
 

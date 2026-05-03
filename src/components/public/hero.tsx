@@ -10,7 +10,7 @@ export default function Hero() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-            ><img src="/images/profile_img.jpg" alt="Alejandro Prieto" className="w-full h-full object-cover object-center grayscale brightness-75"/></motion.div>
+            ><img src="/images/profile_img.jpg" alt="Alejandro Prieto" className="w-full h-full object-cover object-center grayscale brightness-75" /></motion.div>
 
             <div className="flex flex-col items-center gap-4 text-center">
 

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function Work() {
     return (
         <section id="work" className="relative h-[90vh] scroll-mt-18 md:scroll-mt-0 md:h-screen w-full overflow-hidden py-20">
-            
+
             <motion.img src="/images/work.jpg" alt="Proyecto destacado" className="absolute inset-0 w-full h-full object-cover"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -25,7 +25,7 @@ export default function Work() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 1, delay: 0.6 }}
+                    transition={{ duration: 1, delay: 0.8 }}
                 >Proyecto destacado</motion.p>
 
                 <motion.h2 className="font-heading text-5xl md:text-9xl text-white leading-none tracking-tight max-w-2xl"
@@ -35,11 +35,11 @@ export default function Work() {
                     transition={{ duration: 1, delay: 0.7 }}
                 >Refugio de mujeres</motion.h2>
 
-                <motion.p className="font-body text-foreground text-sm md:text-lg mt-2 max-w-lg"
+                <motion.p className="font-body text-sm md:text-lg text-white mt-2 max-w-lg"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 1, delay: 0.8 }}
+                    transition={{ duration: 1, delay: 0.6 }}
                 >Un refugio seguro para mujeres en situación de vulnerabilidad.</motion.p>
 
             </div>
